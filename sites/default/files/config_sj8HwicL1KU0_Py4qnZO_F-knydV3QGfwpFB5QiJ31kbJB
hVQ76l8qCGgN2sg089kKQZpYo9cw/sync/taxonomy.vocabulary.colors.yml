@@ -1,0 +1,9 @@
+uuid: 83406b76-b11c-4bb4-ae02-5e42e5fcfbf4
+langcode: en
+status: true
+dependencies: {  }
+name: Colors
+vid: colors
+description: 'A list of colors for use in profile pages'
+hierarchy: 0
+weight: 0
