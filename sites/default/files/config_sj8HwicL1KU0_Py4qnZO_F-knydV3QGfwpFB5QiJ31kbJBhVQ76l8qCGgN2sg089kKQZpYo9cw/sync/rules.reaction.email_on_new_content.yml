@@ -1,0 +1,48 @@
+uuid: be461864-fcc8-42ae-a095-3b91a86f1610
+langcode: en
+status: true
+dependencies: {  }
+id: email_on_new_content
+label: 'Email on new content'
+events:
+  -
+    event_name: 'rules_entity_insert:node'
+description: ''
+tags:
+  - ''
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: d1aa5013-ade6-40d5-8630-01054c3f81fb
+  conditions:
+    id: rules_and
+    uuid: 3c6ab866-b5e4-4ba0-b072-e62cc7dda79b
+    conditions: {  }
+  actions:
+    id: rules_action_set
+    uuid: 9bb038ed-41a5-4d80-96a5-91b65cdc5fd0
+    actions:
+      -
+        id: rules_action
+        uuid: 4904fc99-1f19-4b29-b0eb-a45169283e72
+        context_values:
+          to:
+            - rebecca.m.a.mazur@gmail.com
+          subject: 'New Page Content Created!'
+          message: 'Someone created some new content!'
+          reply: ''
+          language: ''
+        context_mapping: {  }
+        context_processors:
+          to:
+            rules_tokens: {  }
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+          reply:
+            rules_tokens: {  }
+          language:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_send_email

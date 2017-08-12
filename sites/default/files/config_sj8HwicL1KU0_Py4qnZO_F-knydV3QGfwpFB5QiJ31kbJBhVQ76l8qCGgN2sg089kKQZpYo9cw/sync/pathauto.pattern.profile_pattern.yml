@@ -1,0 +1,22 @@
+uuid: 870f0c1f-c005-42bb-8810-7c246486e367
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: profile_pattern
+label: 'Profile Pattern'
+type: 'canonical_entities:node'
+pattern: 'people/[node:title]'
+selection_criteria:
+  56130dca-c6e7-4a3c-9388-f95572a3c64e:
+    id: node_type
+    bundles:
+      profile: profile
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 56130dca-c6e7-4a3c-9388-f95572a3c64e
+selection_logic: and
+weight: -5
+relationships: {  }
